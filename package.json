@@ -1,6 +1,6 @@
 {
   "name": "fs-access-sync-compat",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "fs.accessSync ponyfill for older versions of Node.js",
   "keywords": [
     "fs",
@@ -24,9 +24,7 @@
     "prepublishOnly": "dtd \"npm run lint\" \"depcheck\"",
     "test": "mocha-compat test/spec/**/*.test.js"
   },
-  "dependencies": {
-    "errno": "^0.1.7"
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "depcheck": "^0.9.2",
