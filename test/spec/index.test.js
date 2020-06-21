@@ -1,5 +1,4 @@
 var assert = require('assert');
-var errno = require('errno');
 
 var accessSync = require('../..');
 
@@ -19,7 +18,7 @@ describe('fs-access-sync-compat', function () {
     } catch (err) {
       assert.equal(err.message.indexOf('ENOENT'), 0);
       assert.equal(err.code, 'ENOENT');
-      assert.ok(~[errno.code.ENOENT, -4058].indexOf(err.errno));
+      assert.ok(~[-2, -4058].indexOf(err.errno));
       done();
     }
   });
