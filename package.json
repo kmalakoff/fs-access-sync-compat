@@ -13,7 +13,7 @@
   "homepage": "https://github.com/kmalakoff/fs-access-sync-compat",
   "repository": {
     "type": "git",
-    "url": "git@github.com:kmalakoff/fs-access-sync-compat.git"
+    "url": "git+ssh://git@github.com/kmalakoff/fs-access-sync-compat.git"
   },
   "license": "MIT",
   "author": "Kevin Malakoff <kmalakoff@gmail.com> (https://github.com/kmalakoff)",
