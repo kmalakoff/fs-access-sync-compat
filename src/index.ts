@@ -7,11 +7,11 @@ function accessError(fullPath) {
   return err;
 }
 
-export default function existsAccessSync(fullPath: string): NodeJS.ErrnoException | null {
+export default (fullPath: string): NodeJS.ErrnoException | null => {
   try {
     fs.statSync(fullPath);
     return null;
   } catch (_err) {
     throw accessError(fullPath);
   }
-}
+};
