@@ -1,18 +1,22 @@
-const assert = require('assert');
+import assert from 'assert';
+import url from 'url';
 
-const accessSync = require('fs-access-sync-compat');
+// @ts-ignore
+import accessSync from 'fs-access-sync-compat';
+
+const ___fileanme = typeof __filename !== 'undefined' ? __filename : url.fileURLToPath(import.meta.url);
 
 describe('fs-access-sync-compat', () => {
   it('exists', (done) => {
     assert.doesNotThrow(() => {
-      accessSync(__filename);
+      accessSync(___fileanme);
     });
     done();
   });
 
   it('does not exist', (done) => {
     try {
-      accessSync(`${__filename}junk`);
+      accessSync(`${___fileanme}junk`);
       assert.ok(false);
     } catch (err) {
       assert.equal(err.message.indexOf('ENOENT'), 0);
