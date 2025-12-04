@@ -1,1 +1,1 @@
-ignores: ["node-version-use", "ts-dev-stack", "@biomejs/biome", "fs-access-sync-compat"]
+ignores: ["node-version-use", "ts-dev-stack", "fs-access-sync-compat"]
