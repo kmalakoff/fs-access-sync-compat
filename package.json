@@ -1,6 +1,6 @@
 {
   "name": "fs-access-sync-compat",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "description": "fs.accessSync ponyfill for older versions of Node.js",
   "keywords": [
     "fs",
