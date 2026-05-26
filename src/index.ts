@@ -1,6 +1,6 @@
 import fs from 'fs';
 
-function accessError(fullPath) {
+function accessError(fullPath: string) {
   const err = new Error(`ENOENT: no such file or directory, access '${fullPath}'`) as NodeJS.ErrnoException;
   err.code = 'ENOENT';
   err.errno = -2;
