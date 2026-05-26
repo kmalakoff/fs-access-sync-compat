@@ -17,9 +17,10 @@ describe('fs-access-sync-compat', () => {
       accessSync(`${___fileanme}junk`);
       assert.ok(false);
     } catch (err) {
-      assert.equal(err.message.indexOf('ENOENT'), 0);
-      assert.equal(err.code, 'ENOENT');
-      assert.equal(err.errno, -2);
+      const e = err as NodeJS.ErrnoException;
+      assert.equal(e.message.indexOf('ENOENT'), 0);
+      assert.equal(e.code, 'ENOENT');
+      assert.equal(e.errno, -2);
       done();
     }
   });
