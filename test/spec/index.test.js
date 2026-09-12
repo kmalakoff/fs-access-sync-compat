@@ -18,7 +18,7 @@ describe('fs-access-sync-compat', function () {
     } catch (err) {
       assert.equal(err.message.indexOf('ENOENT'), 0);
       assert.equal(err.code, 'ENOENT');
-      assert.equal(err.errno, -2);
+      assert.ok(~[-2, -4058].indexOf(err.errno));
       done();
     }
   });
